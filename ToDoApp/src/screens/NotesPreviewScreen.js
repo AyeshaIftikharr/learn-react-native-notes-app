@@ -7,9 +7,10 @@ import {
   TextInput,
   TouchableOpacity,
 } from 'react-native';
-import Note from './Note';
+import Note from '../components/Note';
+import * as theme from '../styles/theme';
 
-const Main = () => {
+const NotesPreviewScreen = () => {
   const [noteArray, setNoteArray] = useState([]);
   const [noteText, setNoteText] = useState('');
 
@@ -61,12 +62,16 @@ const Main = () => {
   );
 };
 
+NotesPreviewScreen.navigationOptions = {
+  header: null
+}
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
   header: {
-    backgroundColor: '#E91E63',
+    backgroundColor: theme.PRIMARY_DARK,
     alignItems: 'center',
     justifyContent: 'center',
     borderBottomWidth: 10,
@@ -90,7 +95,7 @@ const styles = StyleSheet.create({
   },
   textInput: {
     alignSelf: 'stretch',
-    color: '#fff',
+    color: theme.TEXT,
     padding: 20,
     backgroundColor: '#252525',
     borderTopWidth: 2,
@@ -101,7 +106,7 @@ const styles = StyleSheet.create({
     zIndex: 11,
     right: 20,
     bottom: 90,
-    backgroundColor: '#E91E63',
+    backgroundColor: theme.PRIMARY,
     width: 90,
     height: 90,
     borderRadius: 50,
@@ -110,9 +115,9 @@ const styles = StyleSheet.create({
     elevation: 8,
   },
   addButtonText: {
-    color: '#fff',
+    color: theme.TEXT,
     fontSize: 24,
   },
 });
 
-export default Main;
+export default NotesPreviewScreen;
