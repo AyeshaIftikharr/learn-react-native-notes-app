@@ -1,20 +1,30 @@
-import { createAppContainer } from 'react-navigation';
-import { createStackNavigator } from 'react-navigation-stack';
+import React from 'react';
+import EStyleSheet from 'react-native-extended-stylesheet';
+import Navigator from './config/routes';
+import { AlertProvider } from './components/Alert';
+import { Provider } from 'react-redux';
+import store from './config/store';
 
-import LoginScreen from './screens/LoginScreen';
-import SignupScreen from './screens/SignupScreen';
-import NotesPreviewScreen from './screens/NotesPreviewScreen';
+EStyleSheet.build({
+  $primaryBlue: '#4F6D7A',
+  $primaryOrange: '#D57A66',
+  $primaryGreen: '#00BD9D',
+  $primaryPurple: '#9E768F',
 
-const MainNavigator = createStackNavigator({
-  Login: { screen: LoginScreen },
-  Signup: { screen: SignupScreen },
-  NotesPreview: { screen: NotesPreviewScreen }
-}, {
-  initialRouteName: "Login",
-  // headerVisible: false,
-}
+  $white: '#FFFFFF',
+  $border: '#E2E2E2',
+  $inputText: '#797979',
+  $lightGrey: '#F0F0F0',
+  $darkText: '#343434',
+  // outline: 1, didnt work find an alternative to this
+});
+
+const App = () => (
+  <Provider store={store}>
+    <AlertProvider>
+      <Navigator onNavigationStateChange={null} />
+    </AlertProvider>
+  </Provider>
 );
-
-const App = createAppContainer(MainNavigator);
 
 export default App;
