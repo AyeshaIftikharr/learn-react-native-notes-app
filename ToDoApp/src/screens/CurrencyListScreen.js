@@ -31,6 +31,7 @@ const CurrencyList = ({
     navigation.state.params.type === 'quote' ? quoteCurrency : baseCurrency;
 
   return (
+    // TODO: Inline syles  --> not a good practice
     <View style={{ flex: 1 }}>
       <StatusBar translucent={false} barStyle="light-content" />
       <FlatList

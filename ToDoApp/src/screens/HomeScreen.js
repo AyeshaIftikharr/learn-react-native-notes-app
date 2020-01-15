@@ -38,6 +38,7 @@ const HomeScreen = ({
     }
   }, [alertWithType, currencyError]);
 
+  // TODO: local state should be handled by component and not redux
   const handleChangeText = text => {
     changeCurrencyAmount(text);
   };
