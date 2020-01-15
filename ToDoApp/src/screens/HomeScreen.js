@@ -30,7 +30,7 @@ const HomeScreen = ({
 }) => {
   useEffect(() => {
     getInitialConversion();
-  }, [getInitialConversion]);
+  }, []);
 
   useEffect(() => {
     if (currencyError) {
@@ -38,7 +38,6 @@ const HomeScreen = ({
     }
   }, [alertWithType, currencyError]);
 
-  // TODO: local state should be handled by component and not redux
   const handleChangeText = text => {
     changeCurrencyAmount(text);
   };
