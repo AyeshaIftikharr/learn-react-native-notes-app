@@ -11,11 +11,17 @@ export default EStyleSheet.create({
   container: {
     alignItems: 'center',
   },
-  backgroundImage: {
+  containerImage: {
     alignItems: 'center',
     justifyContent: 'center',
     width: '$largeContainerSize',
     height: '$largeContainerSize',
+  },
+  backgroundImage: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    alignSelf: 'stretch',
+    flex: 1,
   },
   image: {
     width: '$largeImageSize',
