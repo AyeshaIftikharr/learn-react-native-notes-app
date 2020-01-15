@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { ScrollView, StatusBar, Platform, Linking } from 'react-native';
-import Ionicons from '@expo/vector-icons';
+import Icon from 'react-native-vector-icons/FontAwesome';
 import { ListItem, Separator } from '../components/List';
 import { connectAlert } from '../components/Alert';
 
@@ -24,25 +24,27 @@ const OptionsScreen = ({ navigation, alertWithType }) => {
       <ListItem
         text="Themes"
         onPress={handlePressThemes}
-      // customIcon={
-      //   <Ionicons
-      //     name={`${ICON_PREFIX}-arrow-forward`}
-      //     size={ICON_SIZE}
-      //     color={ICON_COLOR}
-      //   />
-      // }
+        customIcon={
+          <Icon
+            // name={`${ICON_PREFIX}-right`}
+            name="arrow-right"
+            size={ICON_SIZE}
+            color={ICON_COLOR}
+          />
+        }
       />
       <Separator />
       <ListItem
         text="Fixer.io"
         onPress={handlePressSite}
-      // customIcon={
-      //   <Ionicons
-      //     name={`${ICON_PREFIX}-link`}
-      //     size={ICON_SIZE}
-      //     color={ICON_COLOR}
-      //   />
-      // }
+        customIcon={
+          <Icon
+            // name={`${ICON_PREFIX}-link`}
+            name="link"
+            size={ICON_SIZE}
+            color={ICON_COLOR}
+          />
+        }
       />
       <Separator />
     </ScrollView>
