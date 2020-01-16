@@ -105,7 +105,9 @@ HomeScreen.propTypes = {
 const mapStateToProps = ({ currencies, theme }) => {
   const { baseCurrency, quoteCurrency } = currencies;
   const conversionSelector = currencies.conversions[baseCurrency] || {};
+  console.log('conversions', conversionSelector);
   const rates = conversionSelector.rates || {};
+  console.log('rates', rates);
 
   return {
     baseCurrency,

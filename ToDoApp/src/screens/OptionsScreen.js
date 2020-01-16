@@ -7,7 +7,7 @@ import { connectAlert } from '../components/Alert';
 
 const ICON_PREFIX = Platform.OS === 'ios' ? 'ios' : 'md';
 const ICON_COLOR = '#868686';
-const ICON_SIZE = 23;
+const ICON_SIZE = 20;
 
 const OptionsScreen = ({ navigation, alertWithType }) => {
   const handlePressThemes = () => navigation.navigate('Themes');
@@ -27,7 +27,7 @@ const OptionsScreen = ({ navigation, alertWithType }) => {
         customIcon={
           <Icon
             // name={`${ICON_PREFIX}-right`}
-            name="arrow-right"
+            name="chevron-right"
             size={ICON_SIZE}
             color={ICON_COLOR}
           />
